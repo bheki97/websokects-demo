@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+</head>
+<body>
+<div class="video-container">
+
+
+  <div class="called">
+    <div class="called-content">
+      <div class="portrait-orientation" i18n="@@voiceLandscapeNotSupported">
+        Landscape orientation not supported on small devices.
+      </div>
+      <div class="landscape-orientation" i18n="@@voiceRemote">Remote</div>
+      <video  class="call-video landscape-orientation"></video>
+      <div class="landscape-orientation">
+        <button id="callBtn"  class="video-button"  onclick="call()" disabled="disabled">
+          Call
+        </button>
+        <button  class="video-button"  onclick="getConnection()" >
+          connect
+        </button>
+        <button mat-button="" class="video-button" onclick="remoteMuted = true" >
+          Mute
+        </button>
+        <button mat-button="" class="video-button"  onclick="remoteMuted = false" >
+          Unmute
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="local">
+    <div class="landscape-orientation" >Local</div>
+    <video  class="local-video landscape-orientation"></video>
+    <div class="landscape-orientation">
+      <button mat-button="" class="video-button"  onclick="startLocalVideo()">
+        Activate
+      </button>
+      <button mat-button="" class="video-button"  onclick="stopLocalVideo()" >
+        Deactivate
+      </button>
+      <button mat-button="" class="video-button"  onclick="localMuted = true" >
+        Mute
+      </button>
+      <button mat-button="" class="video-button"  onclick="localMuted = false" >
+        Unmute
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="/app-2.js"></script>
+</body>
+</html>
