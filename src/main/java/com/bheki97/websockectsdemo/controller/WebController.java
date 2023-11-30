@@ -1,7 +1,7 @@
 package com.bheki97.websockectsdemo.controller;
 
 
-import com.bheki97.socketsdemo.model.MsgName;
+import com.bheki97.websockectsdemo.model.MsgName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
